@@ -1,0 +1,14 @@
+#!/bin/sh
+# Hotplug script for xxk-proxy
+# Handles interface events for proxy service
+
+case "$ACTION" in
+    "ifup")
+        INTERFACE="$INTERFACE"
+        # Restart proxy if the interface is the WAN interface
+        WAN_IFACE=$(uci_get_config_value xxk-proxy global wan_iface 2>/dev/null || echo "")
+        if [ -n "$WAN_IFACE" ] && [ "$INTERFACE" = "$WAN_IFACE" ]; then
+            /etc/init.d/xxk-proxy restart
+        fi
+        ;;
+esac

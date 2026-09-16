@@ -1,0 +1,21 @@
+server:
+  # 监听端口
+  port: 5858
+  
+# 日志输出配置
+log:
+  # 是否输出日志
+  enabled: true
+  # 日志输出文件地址
+  file: /var/log/proxy/proxy.log
+  # 日志大小M单位
+  maxsize: 10
+  # 压缩文件备份个数
+  maxbackups: 3
+  # 日志保留天数 
+  maxage: 28
+  # 是否压缩
+  compress: true
+  
+# 配置文件重新加载时间秒
+reload: 30

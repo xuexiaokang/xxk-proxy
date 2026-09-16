@@ -1,0 +1,22 @@
+# 编译产物
+openwrt-package/output/*
+!openwrt-package/output/.gitkeep
+
+# Go 缓存
+package/xxk-proxy/src/go.sum
+package/xxk-proxy/src/go.mod
+
+# 临时文件
+*.log
+*.tmp
+*.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
