@@ -2,9 +2,8 @@
 openwrt-package/output/*
 !openwrt-package/output/.gitkeep
 
-# Go 缓存
-package/xxk-proxy/src/go.sum
-package/xxk-proxy/src/go.mod
+# 预编译二进制（应由 release 分发，不进源码仓库）
+openwrt-package/package/xxk-proxy/src/xxk-proxy
 
 # 临时文件
 *.log
